@@ -80,10 +80,10 @@ export default function
             </div >
             <div className="container">
                 <h2>Your text summary</h2>
-                <p>{text.split(" ").length} words , {text.length} characters</p>
+                <p>{text.length>0 ? text.trim().split(" ").length : 0 } words , {text.length} characters</p>
                 <h2>Preview</h2>
                 <p>{text.length > 0 ? text : "Enter something in the above textbox to preview it here"}</p>
-                <p>{text}</p>
+                {/* <p>{text}</p> */}
                 <h2>Time spend</h2>
                 <p>{0.08 * text.split(" ").length} minutes</p>
             </div>
