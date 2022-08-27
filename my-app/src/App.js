@@ -9,7 +9,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  
+
 } from "react-router-dom";
 
 function App(props) {
@@ -65,21 +65,15 @@ function App(props) {
 
 
       <Router>
-        <Navbar title='Hello' home='ghar' mode={mode} toggle={toggle} toggleGreen={toggleGreen} />
-        <div className="container">
-          <Alert alert={alert} />
-
-        
-
-
-      
-
+        <Navbar title='TextUtils' home='TextUtils' mode={mode} toggle={toggle} toggleGreen={toggleGreen} />
+        <Alert alert={alert} />
+        <div className='container my-3'>
           <Switch>
             <Route exact path="/about">
-              <About mode={mode}/>
+              <About mode={mode} />
             </Route>
             <Route exact path="/">
-              <TextForm heading="Enter the text" />
+              <TextForm showAlert={showalert} heading="Enter the text to analyze below" mode={mode}></TextForm>
             </Route>
           </Switch>
         </div>
